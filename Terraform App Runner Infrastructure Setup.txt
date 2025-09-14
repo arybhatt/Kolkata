@@ -1,0 +1,14 @@
+Project Details
+₹1,500.00 – 12,500.00 INR
+
+ Bidding ends in 6 days, 9 hours
+I want my new web application to run on AWS App Runner, and I need the entire stack defined in Terraform so I can spin it up or tear it down in one command. The build should include:
+
+– An App Runner service wired to my container image (I will provide the ECR URI)
+– A Cognito User Pool that handles sign-up/sign-in and issues tokens the web app can validate
+– IAM roles and policies that strictly separate deploy permissions from runtime permissions, so only the right pipeline or engineer can push a new revision while the service itself runs with the least privilege
+– All configuration expressed as clean, reusable Terraform modules with variables for region, image tag, and scaling settings
+
+Please keep the Terraform code idiomatic (remote state support, workspaces, etc.) and document every input/output so I can extend it later. A simple README that walks me through terraform init → terraform plan → terraform apply is enough; no extra boilerplate.
+
+If you have opinions on additional best practices—private subnets, VPC endpoints, or adding an Identity Pool later for federated identities—feel free to suggest them, but the initial deliverable must deploy successfully with just an AWS account, Terraform, and my container image.
